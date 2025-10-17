@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Releases — Tech Blue</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Releases<span class="accent">.</span></h1>
+      <nav class="controls">
+        <input id="repoInput" placeholder="owner/repo (e.g. facebook/react)" />
+        <input id="tokenInput" placeholder="Optional: GitHub token (for higher rate limits)" />
+        <button id="loadBtn">Load Releases</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="info">
+      <p class="lead">Replicated GitHub releases view — <strong>Tech Blue</strong> theme. Enter a GitHub repo (<code>owner/repo</code>) and click <em>Load Releases</em>.</p>
+      <div class="options">
+        <input id="filterInput" placeholder="Filter by tag, title or body..." />
+        <select id="sortSelect">
+          <option value="published_desc">Newest first</option>
+          <option value="published_asc">Oldest first</option>
+          <option value="tag_desc">Tag Z→A</option>
+          <option value="tag_asc">Tag A→Z</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="releasesArea" class="releases-grid" aria-live="polite">
+      <!-- Release cards injected here -->
+    </section>
+
+    <div id="status" class="status"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Static Releases page • Theme: Tech Blue • Built for quick hosting</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
